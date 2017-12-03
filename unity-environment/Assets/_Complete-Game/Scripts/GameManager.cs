@@ -246,8 +246,6 @@ namespace Completed {
 
                 if (worked) {
                     yield return new WaitForSeconds(enemies[i].moveTime);
-                } else {
-                    yield return new WaitForEndOfFrame();
                 }
                 
                 

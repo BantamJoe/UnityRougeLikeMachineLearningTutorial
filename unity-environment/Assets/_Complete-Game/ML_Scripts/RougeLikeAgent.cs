@@ -104,10 +104,12 @@ namespace Completed {
                 reward = _player.food;
             }
 
+
             reward += (_player.food - last_food) / 100f;
             last_food = _player.food;
+            print(reward);
 
-            if(_player.food <= 1 && !_player.resolved) {
+            if (_player.food <= 1 && !_player.resolved) {
                 _player.resolved = true;
                 reward = -1;
                 done = true;
