@@ -241,14 +241,9 @@ namespace Completed {
             for (int i = 0; i < enemies.Count; i++) {
                 //Call the MoveEnemy function of Enemy at index i in the enemies List.
                 enemies[i].MoveEnemy();
-                bool worked;
+                bool worked = i < enemies.Count ;
                 //Wait for Enemy's moveTime before moving next Enemy,	
-                try {
-                    print(enemies[i]);
-                    worked = true;
-                }catch{
-                    worked = false;
-                }
+
                 if (worked) {
                     yield return new WaitForSeconds(enemies[i].moveTime);
                 } else {
